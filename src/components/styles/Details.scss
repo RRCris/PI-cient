@@ -1,0 +1,77 @@
+.Details {
+  button {
+    margin: 3vw;
+  }
+  .header {
+    margin: 30px 3vw;
+  }
+  h1 {
+    margin: 0 auto 3vw auto;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  .containerGalery {
+    display: flex;
+    justify-content: center;
+
+    #containerImages {
+      flex-grow: 1;
+    }
+  }
+  .containerPlataforms {
+    margin: 0 3vw 3vw 3vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    border-bottom: 1px solid var(--letter-color-primary);
+  }
+  .moreInfo {
+    margin: 0.5vw 6vw;
+    padding: 2vw;
+    border-radius: 3vw;
+    border: 3px dotted var(--color-primary);
+    height: fit-content;
+
+    & #description {
+      max-height: 200px;
+      height: fit-content;
+      overflow: hidden;
+      text-overflow: clip;
+      transition: all 1s;
+      &:hover {
+        max-height: fit-content;
+        height: fit-content;
+      }
+
+      &::first-letter {
+        color: var(--color-primary);
+        font-size: 20pt;
+      }
+    }
+
+    .containerGenres {
+      margin: 3vw 5vw 0 5vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .genre {
+        margin: 0 2vw;
+      }
+    }
+  }
+  .containerStar {
+    margin: 1vw 3vw;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      margin-right: 30px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--back-color-primary);
+  border-bottom: 2px solid var(--color-primary);
+
+  & .contentUser {
+    height: 40px;
+    min-width: 300px;
+
+    flex-grow: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  & .contentButtons {
+    height: 40px;
+    min-width: 390px;
+    flex-grow: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      max-height: 40px;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+}

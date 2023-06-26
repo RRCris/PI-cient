@@ -1,0 +1,18 @@
+.Paginado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 6vw 0 6vw;
+  background-color: var(--back-color-secondary);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Paginado button,
+.Paginado p {
+  font-size: 13pt;
+}
+/*# sourceMappingURL=Paginado.css.map */

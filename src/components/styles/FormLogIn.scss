@@ -1,0 +1,21 @@
+.FormLogIn {
+  width: fit-content;
+  margin: 30px auto;
+  .containerInputs {
+    width: fit-content;
+    margin: 300px auto;
+    .groupInput {
+      margin-bottom: 40px;
+    }
+
+    .containerButton {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    p {
+      margin: 0 auto;
+      text-align: center;
+      width: 200px;
+    }
+  }
+}

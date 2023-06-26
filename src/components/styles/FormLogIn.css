@@ -1,0 +1,31 @@
+.FormLogIn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.FormLogIn .containerInputs {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 300px auto;
+}
+
+.FormLogIn .containerInputs .groupInput {
+  margin-bottom: 40px;
+}
+
+.FormLogIn .containerInputs .containerButton {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.FormLogIn .containerInputs p {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+/*# sourceMappingURL=FormLogIn.css.map */

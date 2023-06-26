@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="ejemplo.css">
+</head>
+<body>
+    <div class="group">
+        
+            <h1>Esto es un titulo principal</h1>
+        
+    </div>
+    <div class="group">
+    
+        <h2>Esto es un subtitulo</h2>
+    
+    </div>
+    <div class="group">
+        
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi in nobis praesentium, corrupti aut rerum
+                exercitationem animi quasi molestias expedita, magnam asperiores pariatur natus amet autem saepe perferendis nulla
+                ex!</p>
+        
+    </div>
+    <div class="group">
+        
+            <div class="groupInput">
+                <input type="text" placeholder="Nombre">
+                <label>Nombre</label>
+            </div>
+                
+            <div class="groupInputSearch">
+                <input type="text" placeholder="Busqueda">
+                <label>Busqueda</label>
+                <img>
+            </div>
+            <br>
+            <div class="groupInput">
+                <input type="text" placeholder="Nombre" disabled>
+                <label>Nombre</label>
+            </div>
+            <div class="groupInputValid groupInputValid_checked">
+                <input type="text" placeholder="Email" required>
+                <label class="name">Email</label>
+                <img class="icon" alt="icon">
+                <label class="message">Esto es un mensaje</label>
+            </div>
+            <div class="groupTextarea">
+                <textarea cols="27"
+                    rows="5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                        Quidem eveniet sapiente quod. Dolorum quod eaque adipisci 
+                                        voluptas odio illum natus quidem dolores, architecto quos delectus, odit ad! Cum, tempora. Consectetur.</textarea>
+                <label class="name">Descripcion</label>
+            </div>
+        
+    </div>
+    <div class="group">
+        <button> es un Boton</button>
+        <button class="buttonOptinal"> es una Opcion</button>
+        <button class="buttonNav"> es un Nav</button>
+    </div>
+    <div class="group">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi in nobis praesentium, corrupti aut rerum
+            exercitationem animi <b>quasi molestias expedita,  magnam asperiores pariatur natus amet</b> autem saepe perferendis nulla
+            ex!</p>
+    </div>
+    <div class="group">
+        <select name="seleccion" id="seleccion">
+            <option value="nada" disabled  selected>escoge algo</option>
+            <option value="ballena">ballena</option>
+            <option value="ballena">tiburon</option>
+            <option value="ballena">ballena</option>
+        </select>
+    </div>
+    <div class="group">
+        <div class="groupRadio">
+            <input type="radio" name="nariño" id="1"><span></span>
+            <p>Opcion 1</p>
+        </div>
+        <div class="groupRadio">
+            <input type="radio" name="nariño" id="1"><span ></span>
+            <p>Opcion 2</p>
+        </div>
+        <div class="groupRadio">
+            <input type="radio" name="nariño" id="1"><span></span>
+            <p>Opcion 3</p>
+        </div>
+        <div class="groupRadio">
+            <input type="radio" name="nariño" id="1"><span></span>
+            <p>Opcion 4</p>
+        </div>
+    </div>
+    <div class="group">
+        <div class="groupCheckbox">
+            <input type="checkbox" name="nariño" id="1"><span class="checkbox"></span>
+            <p>Opcion 1</p>
+        </div>
+        <div class="groupCheckbox">
+            <input type="checkbox" name="nariño" id="1"><span class="checkbox"></span>
+            <p>Opcion 2</p>
+        </div>
+        <div class="groupCheckbox">
+            <input type="checkbox" name="nariño" id="1"><span class="checkbox"></span>
+            <p>Opcion 3</p>
+        </div>
+        <div class="groupCheckbox">
+            <input type="checkbox" name="nariño" id="1"><span class="checkbox"></span>
+            <p>Opcion 4</p>
+        </div>
+        
+        
+        
+    </div>
+    <div class="group">
+        <p>Lorem, <a href="http://localhost:3000">http://localhost:3000</a> ipsum dolor sit amet consectetur adipisicing elit. Sequi in nobis praesentium, corrupti aut rerum
+            exercitationem animi <b>quasi molestias expedita, magnam asperiores pariatur natus amet</b> autem saepe
+            perferendis nulla
+            ex!</p>
+    </div>
+    <div class="group">
+        <div class="containerImages">
+            <img class="firstImage" src="https://img.freepik.com/foto-gratis/disparo-gran-angular-solo-arbol-que-crece-cielo-nublado-puesta-sol-rodeada-cesped_181624-22807.jpg?w=2000" alt="">
+            <img class="secondImage"
+                src="https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/pass/Gear-Photos-597589287.jpg"
+                alt="">
+        </div>
+    </div>
+    <div class="group">
+        
+    </div>
+    <div class="group">
+        <div class="containerGalery">
+            <div id="containerButtons"></div>
+            <div id="containerImages"></div>
+        </div>
+        <script>
+            let arrImg = [
+                "https://mott.pe/noticias/wp-content/uploads/2018/03/10-trucos-para-saber-c%C3%B3mo-tomar-fotos-profesionales-con-el-celular-portada-1280x720.jpg",
+                "https://img.freepik.com/foto-gratis/disparo-gran-angular-solo-arbol-que-crece-cielo-nublado-puesta-sol-rodeada-cesped_181624-22807.jpg?w=2000",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfGGxopc_YZzCqyMwmvZa9oCRUi4A7ztK60ixdxSbYOpd-IkrQfzYaWfVkIRayFHdecoY&usqp=CAU",
+                "https://hubspot.contentools.com/api/v1/media/144652/download/",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW593NZ2Afk0kUQw3mbFZLulYAHKgyGgRI5g&usqp=CAU"
+            ];
+            let containerImages = document.getElementById("containerImages")
+            let containerButtons = document.getElementById("containerButtons")
+
+            function chanceImage(num) {
+                if (num > arrImg.length - 1) num = 0;
+                for (let image of containerImages.children) {
+                    if (image.id == "image " + num) {
+                        image.className = "imageIn";
+                    } else {
+                        image.className = "imageOff"
+                    }
+                }
+
+            }
+            for (let n_url in arrImg) {
+                let object = document.createElement("img");
+                object.id = "image " + n_url;
+                if (n_url == 0) object.className = "imageIn"
+                else object.className = "imageOff"
+                object.src = arrImg[n_url];
+                containerImages.appendChild(object);
+
+                let button = document.createElement("div");
+                button.className = "buttonOn";
+                button.addEventListener("click", (e) => {
+                    for (let but of containerButtons.children) {
+                        but.className = "buttonOn"
+                    }
+                    e.target.className = "buttonOff"
+                    chanceImage(n_url);
+                })
+                containerButtons.appendChild(button);
+            }
+
+
+        </script>
+    </div>
+</body>
+</html>

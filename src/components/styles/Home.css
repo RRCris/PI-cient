@@ -1,0 +1,59 @@
+.Home .Header {
+  padding: 40px 0;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--letter-color-primary);
+}
+
+.Home .Header h1 {
+  display: block;
+  margin: 0 auto;
+}
+
+.Home .Header p {
+  margin: 8px;
+}
+
+.Home .Header p::first-letter {
+  color: var(--color-primary);
+  font-size: 20pt;
+}
+
+.Home .containerFilters {
+  color: var(--letter-color-primary);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.Home .containerPag {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 42px;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 430px) {
+  .Home .containerPag {
+    top: 82px;
+  }
+}
+
+.Home .containerCards {
+  margin: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 30px;
+  background-color: var(--back-color-secondary);
+  border: 2px dotted var(--color-primary);
+}
+/*# sourceMappingURL=Home.css.map */

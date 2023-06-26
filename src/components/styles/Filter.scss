@@ -1,0 +1,80 @@
+.Filter {
+  margin-top: 3vw;
+  .header {
+    width: 85vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .containerSearch {
+      flex-grow: 2;
+      display: flex;
+      justify-content: right;
+      //min-width: 269px;
+
+      .miniLoader {
+        display: none;
+      }
+    }
+    .order {
+      //min-width: 340px;
+      display: flex;
+      justify-content: right;
+      flex-grow: 1;
+      padding-top: 5px;
+      p {
+        margin-right: 10px;
+        font-size: 15pt;
+        display: inline-block;
+      }
+    }
+  }
+  .nameFilters {
+    margin: 20px 5vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    p {
+      display: inline-block;
+      border-radius: 6px;
+      padding: 1px 5px;
+    }
+
+    .nameOrigin {
+      background-color: #7333;
+    }
+
+    .namePlataform {
+      background-color: #3733;
+    }
+
+    .nameGenre {
+      background-color: #3773;
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1vw;
+    padding-bottom: 1vw;
+    border-bottom: 1px solid var(--letter-color-primary);
+  }
+  .filters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 440px) {
+      justify-content: right;
+    }
+
+    .origin {
+      display: flex;
+      justify-content: right;
+    }
+    p {
+      display: inline-block;
+    }
+  }
+}

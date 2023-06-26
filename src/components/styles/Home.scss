@@ -1,0 +1,45 @@
+.Home {
+  .Header {
+    padding: 40px 0;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--letter-color-primary);
+
+    h1 {
+      display: block;
+      margin: 0 auto;
+    }
+    p {
+      margin: 8px;
+
+      &::first-letter {
+        color: var(--color-primary);
+        font-size: 20pt;
+      }
+    }
+  }
+  .containerFilters {
+    color: var(--letter-color-primary);
+    width: fit-content;
+    margin: auto;
+  }
+  .containerPag {
+    position: sticky;
+    top: 42px;
+    z-index: 1000;
+
+    @media only screen and (max-width: 430px) {
+      top: 82px;
+    }
+  }
+  .containerCards {
+    margin: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 30px;
+    background-color: var(--back-color-secondary);
+    border: 2px dotted var(--color-primary);
+  }
+}

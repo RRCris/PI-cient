@@ -1,0 +1,24 @@
+.FormUser h1 {
+  margin: 15px auto;
+}
+
+.FormUser p {
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.FormUser .containerInputs {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 60px auto;
+}
+
+.FormUser .containerInputs .containerButtons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+}
+/*# sourceMappingURL=FormUser.css.map */

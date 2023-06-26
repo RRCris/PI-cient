@@ -1,0 +1,109 @@
+.Details button {
+  margin: 3vw;
+}
+
+.Details .header {
+  margin: 30px 3vw;
+}
+
+.Details h1 {
+  margin: 0 auto 3vw auto;
+}
+
+.Details h2 {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.Details .containerGalery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Details .containerGalery #containerImages {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.Details .containerPlataforms {
+  margin: 0 3vw 3vw 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 1px solid var(--letter-color-primary);
+}
+
+.Details .moreInfo {
+  margin: 0.5vw 6vw;
+  padding: 2vw;
+  border-radius: 3vw;
+  border: 3px dotted var(--color-primary);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.Details .moreInfo #description {
+  max-height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  text-overflow: clip;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.Details .moreInfo #description:hover {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.Details .moreInfo #description::first-letter {
+  color: var(--color-primary);
+  font-size: 20pt;
+}
+
+.Details .moreInfo .containerGenres {
+  margin: 3vw 5vw 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Details .moreInfo .containerGenres .genre {
+  margin: 0 2vw;
+}
+
+.Details .containerStar {
+  margin: 1vw 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Details .containerStar h2 {
+  margin-right: 30px;
+}
+/*# sourceMappingURL=Details.css.map */

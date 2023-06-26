@@ -1,0 +1,120 @@
+.Filter {
+  margin-top: 3vw;
+}
+
+.Filter .header {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Filter .header .containerSearch {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.Filter .header .containerSearch .miniLoader {
+  display: none;
+}
+
+.Filter .header .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 5px;
+}
+
+.Filter .header .order p {
+  margin-right: 10px;
+  font-size: 15pt;
+  display: inline-block;
+}
+
+.Filter .nameFilters {
+  margin: 20px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Filter .nameFilters p {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 1px 5px;
+}
+
+.Filter .nameFilters .nameOrigin {
+  background-color: #7333;
+}
+
+.Filter .nameFilters .namePlataform {
+  background-color: #3733;
+}
+
+.Filter .nameFilters .nameGenre {
+  background-color: #3773;
+}
+
+.Filter h2 {
+  text-align: center;
+  margin-bottom: 1vw;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid var(--letter-color-primary);
+}
+
+.Filter .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 440px) {
+  .Filter .filters {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+.Filter .filters .origin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.Filter .filters p {
+  display: inline-block;
+}
+/*# sourceMappingURL=Filter.css.map */

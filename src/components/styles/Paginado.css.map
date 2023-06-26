@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,MAAM,EAAE,cAAc;EACtB,gBAAgB,EAAE,2BAA2B;EAC7C,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,GAAG;CAMnB;;AAZD,AAQE,SARO,CAQP,MAAM;AARR,SAAS,CASP,CAAC,CAAC;EACA,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "Paginado.scss"
+    ],
+    "names": [],
+    "file": "Paginado.css"
+}

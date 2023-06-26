@@ -1,0 +1,47 @@
+.Create {
+  h1 {
+    margin: 30px auto;
+  }
+
+  .groupTextarea {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .containerImage {
+    margin-left: 30px;
+    background-color: var(--back-color-secondary);
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  #containerGenres {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    .genre {
+      margin-bottom: 10px;
+    }
+  }
+
+  #containerPlataforms {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    .genre {
+      margin-bottom: 10px;
+    }
+  }
+  select {
+    margin-left: 30px;
+  }
+}

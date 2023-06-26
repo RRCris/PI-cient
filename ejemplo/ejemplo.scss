@@ -1,0 +1,778 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Anek Latin", "sans-serif";
+    
+}
+
+:root{
+    --letter-color-primary:#ddd;
+    --color-primary:#fa0;
+    --color-secondary:#e0f;
+    --back-color-primary:#0a1a24;
+
+
+    --filter-primary:invert(76%) sepia(33%) saturate(4076%) hue-rotate(357deg) brightness(98%) contrast(107%);
+    --filter-warn:invert(99%) sepia(72%) saturate(5489%) hue-rotate(359deg) brightness(86%) contrast(102%);
+    --filter-checked:invert(74%) sepia(25%) saturate(6316%) hue-rotate(92deg) brightness(94%) contrast(105%);
+    --filter-error:invert(14%) sepia(73%) saturate(5448%) hue-rotate(357deg) brightness(71%) contrast(116%);
+
+}
+
+
+body{
+    background-color: var(--back-color-primary);
+    transition: color .3s;
+    color: var(--color-primary);
+    
+    
+    &:hover {
+        color: var(--back-color-primary);
+    }
+    
+    &::-webkit-scrollbar {
+    
+        background: #ddd3;
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border: 1px solid var(--color-primary);
+        border-right: none;
+        box-shadow: inset 0 0 0 20px;
+        border-radius: 50px;
+    }
+}
+
+.group{
+    padding: 40px 10px;
+    margin: 30px auto;
+    display: block;
+    background-color: var(--back-color-primary);
+    width: fit-content;
+}
+
+p{
+    max-width: 200px;
+}
+
+
+
+///aqui comienza
+h1{
+    padding: 10px 20px;
+    color: var(--letter-color-primary);
+    font-weight: 800;
+    font-size: 30pt;
+    border: 2px solid var(--color-primary);
+    border-radius: 15px;
+    // max-width: 200px;
+}
+
+h2{
+    color: var( --letter-color-primary);
+    font-weight: 500;
+    font-size: 24pt;
+}
+
+p{
+    color: var(--letter-color-primary);
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+//aqui estan los diferentes inpues de texto el grupo de validacion cuenta con tres clases para cambiar la apariencia respecto a la validacion(error,check,warn)
+.groupInput{
+    position: relative;
+    input[type="text"] {
+        color: var(--letter-color-primary);
+        background: #0000;
+        border: 2px solid var(--color-primary);
+        font-size: 16pt;
+        font-weight: 300;
+        padding: 10px 20px;
+        border-radius: 10px;
+    
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px var(--color-primary);
+
+        }
+        &::placeholder{
+            opacity: 1;
+            transition: .3s;
+        }
+        &:focus::placeholder{
+            opacity: 0;
+        }
+
+        &:focus + label{
+            display: inline;
+            padding: 0 10px;
+            color: var(--color-primary);
+            font-size: 10pt;
+            font-weight: 300;
+            background: var(--back-color-primary);
+            position: absolute;
+            top: -5px;
+            left: 15px;
+        }
+    
+        &:disabled {
+            border: 2px solid #aaa;
+            opacity: .5;
+            cursor: not-allowed;
+
+            & + label {
+                display: inline;
+                padding: 0 10px;
+                color: var(--letter-color-primary);
+                font-size: 10pt;
+                font-weight: 300;
+                background: var(--back-color-primary);
+                position: absolute;
+                top: -5px;
+                left: 15px;
+            }
+
+            &::placeholder{
+                opacity: 0;
+            }
+            
+        }
+        
+    }
+    
+    label {
+    
+        padding-left: 20px;
+        color: #fa00;
+        font-size: 16pt;
+        font-weight: 300;
+        position: absolute;
+        top:10px;
+        left: 0;
+        transition: .3s;
+    }
+
+}
+
+.groupInputSearch {
+    position: relative;
+    width: fit-content;
+
+    input[type="text"] {
+        color: var(--letter-color-primary);
+        background: #0000;
+        border: 2px solid var(--color-primary);
+        font-size: 16pt;
+        font-weight: 300;
+        padding: 10px 20px;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px var(--color-primary);
+
+        }
+
+        &::placeholder {
+            opacity: 1;
+            transition: .3s;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+
+        &:focus + label {
+            display: inline;
+            padding: 0 10px;
+            color: var(--color-primary);
+            font-size: 10pt;
+            font-weight: 300;
+            background: var(--back-color-primary);
+            position: absolute;
+            top:unset;
+            bottom: -5px;
+            left: 15px;
+        }
+        
+
+        &:disabled {
+            border: 2px solid #aaa;
+            cursor: not-allowed;
+
+        }
+
+        &:disabled + label {
+            cursor: not-allowed;
+
+        }
+    }
+
+    label {
+
+        padding-left: 20px;
+        color: #fa00;
+        font-size: 16pt;
+        font-weight: 300;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transition: .3s;
+    }
+    img{
+        content: url("./search.svg");
+        filter: var(--filter-primary);
+        opacity: .3;
+        width: 25px;
+        position: absolute;
+        right: 13px;
+        top: 13px;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+}
+.groupInputValid {
+    position: relative;
+    padding-bottom: 50px;
+    width: fit-content;
+
+    input[type="text"] {
+        color: var(--letter-color-primary);
+        background: #0000;
+        border: 2px solid var(--color-primary);
+        font-size: 16pt;
+        font-weight: 300;
+        padding: 10px 20px;
+        border-radius: 10px;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px var(--color-primary);
+
+        }
+
+        &::placeholder {
+            opacity: 1;
+            transition: .3s;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+
+        &:focus + .name {
+            display: inline;
+            padding: 0 10px;
+            color: var(--color-primary);
+            font-size: 10pt;
+            font-weight: 300;
+            background: var(--back-color-primary);
+            position: absolute;
+            top: -5px;
+            left: 15px;
+        }
+
+        &:disabled {
+            border: 2px solid #aaa;
+            cursor: not-allowed;
+
+        }
+
+        &:disabled + .name {
+            cursor: not-allowed;
+
+        }
+
+
+    }
+
+    .name {
+
+        padding-left: 20px;
+        color: #fa00;
+        font-size: 16pt;
+        font-weight: 300;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transition: .3s;
+    }
+
+    .message {
+        opacity: 0;
+        position: absolute;
+        width: fit-content;
+        bottom: 25px;
+        left: 5px;
+        padding: 1px 4px;
+
+    }
+
+    .icon {
+        position: absolute;
+        opacity: 0;
+    }
+
+}
+
+.groupInputValid_checked {
+    .message {
+        opacity: 1;
+        color: #0d0;
+        border: 1px solid #0d0;
+    }
+
+    .icon {
+        opacity: 1;
+        content: url("./checked.svg");
+        width: 30px;
+        filter: var(--filter-checked);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}
+
+.groupInputValid_warn {
+    .message {
+        opacity: 1;
+        color: #ff0;
+        border: 1px solid #ff0;
+    }
+
+    .icon {
+        opacity: 1;
+        content: url("./alert.svg");
+        width: 30px;
+        filter: var(--filter-warn);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}
+
+.groupInputValid_error {
+    .message {
+        opacity: 1;
+        color: #d00;
+        border: 1px solid #d00;
+    }
+
+    .icon {
+        opacity: 1;
+        content: url("./error.svg");
+        width: 30px;
+        filter: var(--filter-error);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}
+
+
+.groupTextarea {
+    position: relative;
+
+    textarea {
+        background: var(--back-color-primary);
+        border: 1px solid var(--color-primary);
+        transition: .3s;
+        color: var(--letter-color-primary);
+        font-size: 14pt;
+        font-weight: 300;
+        cursor: default;
+        padding: 5px;
+        resize: none;
+        opacity: .5;
+
+        &:hover {
+            box-shadow: 0 0 6px var(--color-primary);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 16px var(--color-primary);
+            padding: 15px;
+            cursor: text;
+            opacity: 1;
+
+
+        }
+
+        &::-webkit-scrollbar {
+            background: #ddd3;
+            width: 8px;
+
+
+        }
+
+        &::-webkit-scrollbar-thumb {
+            color: var(--back-color-primary);
+            border: 1px solid var(--color-primary);
+            border-right: none;
+            box-shadow: inset 0 0 0 20px;
+            border-radius: 50px;
+        }
+
+    }
+
+    .name {
+        color: var(--color-primary);
+        position: absolute;
+        top: -10px;
+        left: 1px;
+        background-color: var(--back-color-primary);
+    }
+
+}
+
+//aqui estan los diferentes botones que se peuden añadir 
+button {
+    background: var(--color-primary);
+    color: var(--back-color-primary);
+    font-size: 16pt;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border:none;
+    transition: .3s;
+
+    &:hover{
+        color: var(--color-primary);
+        background: var(--back-color-primary);
+        outline:2px solid var(--color-primary)
+    }
+
+}
+.buttonOptinal{
+    background: var(--back-color-primary);
+    color: var(--letter-color-primary);
+    outline: 2px solid var(--letter-color-primary);
+
+
+    &:hover {
+        color: var(--color-primary);
+        background: var(--back-color-primary);
+        outline: 2px solid var(--color-primary)
+    }
+}
+
+.buttonNav {
+    background: var(--back-color-primary);
+    color: var(--letter-color-primary);
+    border-radius: 0px;
+
+    &:hover {
+        
+        outline: none;
+        border-left: 3px solid var(--letter-color-primary);
+        border-right: 3px solid var(--letter-color-primary);
+        background: var(--back-color-primary);
+        letter-spacing: 3px;
+    }
+}
+
+//aqui estan los selectores
+.groupCheckbox{
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 25px;
+        height: 25px;
+        opacity: 0;
+    
+    }
+    input:hover + span{
+        border: 2px solid var(--color-primary)
+    }
+    input:checked + span{
+        border: 2px solid var(--color-primary)
+    }
+    input:checked + span::after{
+        opacity: 1;
+    }
+    input:checked+span+p {
+        color: var(--color-primary);
+    }
+    span {
+        //pointer-events: none;
+        border: 2px solid var(--letter-color-primary);
+        background: var(--back-color-primary);
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+    }
+    span::after{
+        color: var(--back-color-primary);
+        content: "✔";
+        text-align: center;
+        font-size: 9pt;
+        font-weight: 800;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: var(--color-primary);
+        
+        top: 3px;
+        left: 3px;
+        opacity: 0;
+        transition: .3s;
+    }
+    p{
+        display: inline-block;
+        padding: 5px 
+    }
+}
+
+
+.groupRadio {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 25px;
+        height: 25px;
+        opacity: 0;
+
+    }
+
+    input:hover+span {
+        border: 2px solid var(--color-primary)
+    }
+
+    input:checked+span {
+        border: 2px solid var(--color-primary)
+    }
+
+    input:checked+span::after {
+        opacity: 1;
+        font-size: 9pt;
+    }
+
+    input:checked+span+p {
+        color: var(--color-primary);
+    }
+
+    span {
+        //pointer-events: none;
+        border: 2px solid var(--letter-color-primary);
+        background: var(--back-color-primary);
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    span::after {
+        color: var(--color-primary);
+        content: "✔";
+        text-align: center;
+        font-size: 1pt;
+        font-weight: 800;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: var(--back-color-primary);
+
+        top: 3px;
+        left: 3px;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    p {
+        display: inline-block;
+        padding: 5px
+    }
+}
+
+
+select{
+    padding: 3px 15px;
+    background: var(--back-color-primary);
+    color: var(--letter-color-primary);
+    font-size: 16pt;
+    font-weight: 300;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    border: 2px solid var(--color-primary);
+    transition: .3s;
+    
+    &:focus{
+        border: 2px solid var(--letter-color-primary);
+        outline: none;
+        box-shadow: 0 0 10px var(--color-primary);
+    }
+    
+}
+
+
+
+b{
+    color: var(--color-primary);
+}
+
+
+
+a{  
+    text-decoration: none;
+    background-color: var(--color-primary);
+    font-weight: 500;
+    &:hover{
+        box-shadow: 0 0 15px var(--color-primary);
+    }
+    &:link {
+        color: var(--back-color-primary)
+    }
+    &:visited {
+        color: var(--back-color-primary);
+    }
+}
+
+
+.containerImages{
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    .firstImage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .secondImage {
+        border: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+        
+    
+        &:hover {
+            object-position: 190px;
+            border: 2px solid var(--color-primary);
+        }
+    }
+}
+
+
+
+
+
+.containerGalery{
+    position: relative;
+    padding:10px;
+    transition: 0.8s;
+
+    &:hover #containerImages img {
+        border-radius: 0;
+        object-position: center;
+    }
+    
+    #containerImages{
+        position: relative;
+        width: 300px;
+        height: 500px;
+        background: var(--back-color-primary);
+        
+
+        &  img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+            object-position: top;
+            transition: 1s;
+            border-radius: 60px;
+            
+            
+            
+        }
+        & .imageIn{
+            opacity: 1;
+        }
+        & .imageOff {
+            opacity: 0;
+        }
+
+    }
+
+
+    
+
+    #containerButtons{
+        position: absolute;
+        z-index: 10;
+        bottom: 10%;
+        left: 5%;
+
+        .buttonOn{
+            margin: 0  10px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            
+
+            &:hover{
+                box-shadow: 0 0 20px var(--back-color-primary);
+
+            }
+            
+        }
+        .buttonOff {
+            margin: 0 10px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: var(--back-color-primary);
+            border-radius: 50%;
+        
+        }
+    }
+    
+
+
+} 
+
+
+//esto se hace para modificar la scroll bar que hereda de body
+
+
+
+
