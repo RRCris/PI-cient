@@ -1,3 +1,4 @@
+import { PATH } from "../services/path";
 import "./styles/FormUser.css";
 
 import { useHistory } from "react-router-dom";
@@ -128,7 +129,7 @@ export function FormUser() {
               "Content-Type",
               " application/x-www-form-urlencoded"
             );
-            fetch("http://localhost:3001/user", {
+            fetch(PATH.user, {
               method: "POST",
               headers: headers,
               body: body,

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDetails } from "../redux/actions";
 import { useEffect } from "react";
 import { Loader } from "./Loader";
+import { PATH } from "../services/path";
 
 export function Details() {
   //use the hoocks
@@ -129,7 +130,7 @@ export function Details() {
     if (!isNaN(input)) {
       if (input >= 0 && input <= 5) {
         let id = details.id.toString().replace("R", "");
-        let http = `http://localhost:3001/score?videogame=${id}&user=${state.user.id}&score=${input}`;
+        let http = `${PATH.score}?videogame=${id}&user=${state.user.id}&score=${input}`;
         console.log(http);
         fetch(http)
           .then((r) => r.json())

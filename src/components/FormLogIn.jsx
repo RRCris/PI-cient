@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { saveUser } from "../redux/actions";
 import { useHistory } from "react-router-dom";
 import "./styles/FormLogIn.css";
+import { PATH } from "../services/path";
 
 export function FormLogIn(props) {
   let dispatch = useDispatch();
@@ -10,7 +11,7 @@ export function FormLogIn(props) {
     let user = document.getElementById("inputUserName").value;
     let pass = document.getElementById("inputPassword").value;
 
-    fetch(`http://localhost:3001/user?username=${user}&password=${pass}`)
+    fetch(`${PATH.user}?username=${user}&password=${pass}`)
       .then((r) => r.json())
       .then((r) => {
         if (r.err) {

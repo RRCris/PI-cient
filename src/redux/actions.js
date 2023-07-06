@@ -1,3 +1,4 @@
+import { PATH } from "../services/path";
 import {
   SAVEFIRST100,
   SAVEDETAILS,
@@ -12,13 +13,13 @@ import {
 } from "./actionsTypes";
 
 export function getfirst100(dispatch) {
-  fetch("http://localhost:3001/videogames")
+  fetch(PATH.game)
     .then((x) => x.json())
     .then((x) => dispatch(saveFirst100(x)));
 }
 
 export function getSearch(dispatch, search, loader) {
-  fetch("http://localhost:3001/videogames?name=" + search)
+  fetch(`${PATH.game}?name=` + search)
     .then((x) => x.json())
     .then((x) => {
       loader.style.display = "none";
@@ -27,7 +28,7 @@ export function getSearch(dispatch, search, loader) {
 }
 
 export function getDetails(dispatch, history, id) {
-  fetch("http://localhost:3001/videogames/" + id)
+  fetch(`${PATH.game}/${id}`)
     .then((x) => x.json())
     .then((x) => {
       //evitar catch intencionales

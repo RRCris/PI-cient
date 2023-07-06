@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import "./styles/Create.css";
+import { PATH, Path } from "../services/path";
 
 export function Create() {
   //hoocks
@@ -147,7 +148,7 @@ export function Create() {
 
       let headers = new Headers();
       headers.append("Content-Type", " application/x-www-form-urlencoded");
-      fetch("http://localhost:3001/videogames", {
+      fetch(PATH.game, {
         method: "POST",
         headers: headers,
         body: body,

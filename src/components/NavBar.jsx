@@ -1,5 +1,5 @@
 import { Link, useHistory } from "react-router-dom";
-import "./styles/NavBar.css";
+import "./styles/navBar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { clearUser } from "../redux/actions";
 export function Navbar() {
