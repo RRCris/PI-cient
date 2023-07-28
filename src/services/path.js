@@ -1,4 +1,4 @@
-const hostAPI = "https://pi-server-production-0109.up.railway.app";
+const hostAPI = "https://vlixes-api.onrender.com";
 
 export const PATH = {
   game: hostAPI + "/videogames",
